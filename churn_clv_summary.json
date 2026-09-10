@@ -1,0 +1,13 @@
+{
+  "reference_date": "2023-02-01",
+  "n_clients": 5,
+  "n_churn_proxy_positifs": 1,
+  "model_coefficients": {
+    "Age": -0.057,
+    "Total_Spent": -0.123,
+    "Anciennete_j": -0.508,
+    "Recence_j": 0.852
+  },
+  "model_validation_note": "Validation leave-one-out sur 4/5 clients evaluables (les autres cas n'ont pas pu etre testes : classe unique dans le pli d'entrainement). Cette 'accuracy' n'est PAS une mesure fiable : echantillon bien trop petit.",
+  "avertissement": "Le proxy de churn (aucune vente enregistree) est une regle metier faute de variable de resiliation reelle dans les donnees fournies. Le modele de regression logistique est entraine sur 5 observations seulement : ses coefficients et probabilites sont a but illustratif / pedagogique et ne doivent pas etre utilises pour une decision commerciale reelle sans un historique beaucoup plus large et un vrai libelle de churn."
+}
