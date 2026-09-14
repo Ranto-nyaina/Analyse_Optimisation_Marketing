@@ -12,6 +12,7 @@ elles ne mesurent pas une capacite de generalisation reelle.
 import pandas as pd
 import numpy as np
 import json
+from pathlib import Path
 from datetime import datetime
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import LeaveOneOut
@@ -19,8 +20,11 @@ from sklearn.preprocessing import StandardScaler
 
 REF_DATE = pd.Timestamp("2023-02-01")  # date de reference = juste apres la derniere campagne connue
 
-customers = pd.read_csv("customers_data.csv", parse_dates=["Join_Date"])
-sales = pd.read_csv("sales_data.csv", parse_dates=["Date"])
+HERE = Path(__file__).parent
+DATA_DIR = HERE.parent / "data" if (HERE.parent / "data").exists() else HERE
+
+customers = pd.read_csv(DATA_DIR / "customers_data.csv", parse_dates=["Join_Date"])
+sales = pd.read_csv(DATA_DIR / "sales_data.csv", parse_dates=["Date"])
 
 # ---- agregats de vente par client ----
 sales_agg = sales.groupby("Customer_ID").agg(
@@ -111,7 +115,7 @@ out = out.rename(columns={
     "Churn_proxy": "Churn proxy (regle)", "Risque_churn_modele": "Risque churn modele (%)",
 })
 
-out.to_csv("churn_clv_results.csv", index=False)
+out.to_csv(HERE / "churn_clv_results.csv", index=False)
 
 summary = {
     "reference_date": str(REF_DATE.date()),
@@ -128,7 +132,7 @@ summary = {
         "historique beaucoup plus large et un vrai libelle de churn."
     ),
 }
-with open("churn_clv_summary.json", "w", encoding="utf-8") as f:
+with open(HERE / "churn_clv_summary.json", "w", encoding="utf-8") as f:
     json.dump(summary, f, ensure_ascii=False, indent=2)
 
 print(out.to_string(index=False))

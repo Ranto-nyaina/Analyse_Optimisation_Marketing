@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -17,15 +18,24 @@ NAVY = "#1E2761"
 CORAL = "#F4623A"
 ICE = "#CADCFC"
 
+# Le dossier data/ est au niveau racine du depot ; on retombe sur le dossier
+# courant si jamais le script est lance depuis un dossier autonome (zip).
+HERE = Path(__file__).parent
+DATA_DIR = HERE.parent / "data" if (HERE.parent / "data").exists() else HERE
+
+
+def dpath(name):
+    return str(DATA_DIR / name)
+
 # =========================================================
 # Chargement des donnees
 # =========================================================
 @st.cache_data
 def load_data():
-    customers = pd.read_csv("customers_data.csv", parse_dates=["Join_Date"])
-    sales = pd.read_csv("sales_data.csv", parse_dates=["Date"])
-    products = pd.read_csv("products_data.csv")
-    marketing = pd.read_csv("marketing_data.csv", parse_dates=["Start_Date", "End_Date"])
+    customers = pd.read_csv(dpath("customers_data.csv"), parse_dates=["Join_Date"])
+    sales = pd.read_csv(dpath("sales_data.csv"), parse_dates=["Date"])
+    products = pd.read_csv(dpath("products_data.csv"))
+    marketing = pd.read_csv(dpath("marketing_data.csv"), parse_dates=["Start_Date", "End_Date"])
     sales["Revenue"] = sales["Quantity"] * sales["Sale_Price"]
     sales_full = sales.merge(products, on="Product_ID", how="left").merge(
         customers[["Customer_ID", "Name"]], on="Customer_ID", how="left"
@@ -36,8 +46,8 @@ def load_data():
 customers, sales, products, marketing, sales_full = load_data()
 
 try:
-    churn_clv = pd.read_csv("churn_clv_results.csv")
-    with open("churn_clv_summary.json", encoding="utf-8") as f:
+    churn_clv = pd.read_csv(HERE / "churn_clv_results.csv")
+    with open(HERE / "churn_clv_summary.json", encoding="utf-8") as f:
         churn_summary = json.load(f)
 except FileNotFoundError:
     churn_clv, churn_summary = None, None
