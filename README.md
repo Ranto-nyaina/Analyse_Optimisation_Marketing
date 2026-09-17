@@ -84,13 +84,13 @@ Le dossier data/ est la source unique de vérité : le rapport, le dashboard et 
 
 🚀 Installation et lancement du dashboard
 
-git clone <url-de-ce-depot>  
-cd <nom-du-depot>/dashboard  
+git clone https://github.com/Ranto-nyaina/Analyse_Optimisation_Marketing 
+cd Analyse_Optimisation_Marketing/dashboard  
 pip install -r requirements.txt  
 python churn_clv.py        # régénère les résultats churn/CLV si data/ a changé  
 streamlit run app.py
 
-⚠️ <url-de-ce-depot> et <nom-du-depot> sont des placeholders — à remplacer par l'URL et le nom réels avant publication.
+⚠️ https://github.com/Ranto-nyaina/Analyse_Optimisation_Marketing et Analyse_Optimisation_Marketing sont des placeholders — à remplacer par l'URL et le nom réels avant publication.
 
 Le rapport (rapport/) et la présentation (presentation/) sont des fichiers statiques (.docx, .pdf, .pptx) : aucune installation n'est nécessaire pour les consulter, il suffit de les ouvrir.
 
@@ -220,8 +220,8 @@ Projet académique — ENI Fianarantsoa. Usage pédagogique uniquement.│   ├
 ## Lancer le dashboard en local
 
 ```bash
-git clone <url-de-ce-depot>
-cd <nom-du-depot>/dashboard
+git clone https://github.com/Ranto-nyaina/Analyse_Optimisation_Marketing
+cd Analyse_Optimisation_Marketing/dashboard
 pip install -r requirements.txt
 python churn_clv.py        # régénère les résultats churn/CLV si data/ a changé
 streamlit run app.py
