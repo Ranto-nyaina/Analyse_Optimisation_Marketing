@@ -219,8 +219,10 @@ Projet académique — ENI Fianarantsoa. Usage pédagogique uniquement.
     ├── sales_data.csv
     ├── products_data.csv
     └── marketing_data.csv
-```
 
+---
+
+```
 ## Lancer le dashboard en local
 
 ```bash
