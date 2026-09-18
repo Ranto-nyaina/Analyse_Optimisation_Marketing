@@ -207,7 +207,9 @@ Sa valeur pédagogique ne repose pas sur la fiabilité statistique des modèles 
 
 📄 Licence / usage
 
-Projet académique — ENI Fianarantsoa. Usage pédagogique uniquement.│   ├── churn_clv_results.csv    # sortie du pipeline (générée)
+Projet académique — ENI Fianarantsoa. Usage pédagogique uniquement.
+.
+│   ├── churn_clv_results.csv    # sortie du pipeline (générée)
 │   ├── churn_clv_summary.json   # sortie du pipeline (générée)
 │   ├── requirements.txt
 │   └── README.md
@@ -216,6 +218,7 @@ Projet académique — ENI Fianarantsoa. Usage pédagogique uniquement.│   ├
     ├── sales_data.csv
     ├── products_data.csv
     └── marketing_data.csv
+
 ```
 
 ## Lancer le dashboard en local
