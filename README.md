@@ -45,6 +45,7 @@ Comment exploiter les données clients, produits, ventes et campagnes pour segme
                                    │  
               ┌────────────────────┼────────────────────┐  
               ▼                    ▼                    ▼  
+   
    ┌─────────────────────┐ ┌─────────────────────┐  ┌─────────────────────┐  
    │      rapport/       │ │    dashboard/       │  │   presentation/     │  
    │  analyse complète   │ │ Streamlit interactif│  │  synthèse visuelle  │  
