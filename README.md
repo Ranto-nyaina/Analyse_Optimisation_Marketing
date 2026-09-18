@@ -44,15 +44,15 @@ Comment exploiter les données clients, produits, ventes et campagnes pour segme
                     └──────────────┬────────────┘  
                                    │  
               ┌────────────────────┼────────────────────┐  
-              ▼                    ▼                    ▼  
-   
-   ┌─────────────────────┐ ┌─────────────────────┐  ┌─────────────────────┐  
-   │      rapport/       │ │    dashboard/       │  │   presentation/     │  
-   │  analyse complète   │ │ Streamlit interactif│  │  synthèse visuelle  │  
-   │  (sections M1 à M9) │ │ (segmentation,      │  │  pour la soutenance │  
-   │                     │ │  campagnes,         │  │                     │  
-   │                     │ │  churn/CLV, données)│  │                     │  
-   └─────────────────────┘ └─────────────────────┘  └─────────────────────┘
+              ▼                    ▼                    ▼   
+    ┌─────────────────────┐ ┌─────────────────────┐  ┌─────────────────────┐  
+    │      rapport/       │ │    dashboard/       │  │   presentation/     │  
+    │  analyse complète   │ │ Streamlit interactif│  │  synthèse visuelle  │  
+    │  (sections M1 à M9) │ │ (segmentation,      │  │  pour la soutenance │  
+    │                     │ │  campagnes,         │  │                     │  
+    │                     │ │  churn/CLV, données)│  │                     │  
+    └─────────────────────┘ └─────────────────────┘  └─────────────────────┘
+
 
 Le dossier data/ est la source unique de vérité : le rapport, le dashboard et la présentation s'appuient tous sur les mêmes 4 fichiers CSV.
 
