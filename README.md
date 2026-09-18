@@ -208,7 +208,6 @@ Sa valeur pédagogique ne repose pas sur la fiabilité statistique des modèles 
 📄 Licence / usage
 
 Projet académique — ENI Fianarantsoa. Usage pédagogique uniquement.
-
 .  
 ├── dashboard/
 │   ├── churn_clv_results.csv    # sortie du pipeline (générée)
