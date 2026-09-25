@@ -35,9 +35,9 @@ Comment exploiter les données clients, produits, ventes et campagnes pour segme
                           │     customers / sales /        │
                           │     products / marketing       │
                           └─────────────┬─────────────┘
-                                          │
+                                           │
                ┌────────────────────────┼────────────────────────┐
-               ▼                        ▼                         ▼
+               ▼                         ▼                         ▼
     ┌─────────────────────┐  ┌─────────────────────┐  ┌─────────────────────┐
     │       rapport/       │   │      dashboard/      │  │      presentation/    │
     │    analyse complète   │   │Streamlit interactif   │  │    synthèse visuelle    │
