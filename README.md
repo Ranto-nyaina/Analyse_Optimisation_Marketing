@@ -41,9 +41,9 @@ Comment exploiter les données clients, produits, ventes et campagnes pour segme
     ┌─────────────────────┐  ┌─────────────────────┐  ┌─────────────────────┐
     │       rapport/      │  │      dashboard/     │  │    presentation/    │
     │   analyse complète  │  │ Streamlit interactif│  │  synthèse visuelle  │
-    │   (sections M1 à M9)│  │  (segmentation,     │  │  pour la soutenance │
-    │                     │  │   campagnes,        │  │                     │
-    │                     │  │   churn/CLV, données)│  │                     │
+    │  (sections M1 à M9) │  │  (segmentation,     │  │  pour la soutenance │
+    │                     │  │  campagnes,         │  │                     │
+    │                     │  │  churn/CLV, données)│  │                     │
     └─────────────────────┘  └─────────────────────┘  └─────────────────────┘
 ```
 
