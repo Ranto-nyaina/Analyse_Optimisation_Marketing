@@ -29,18 +29,28 @@ Comment exploiter les données clients, produits, ventes et campagnes pour segme
 
 ## 🏗️ Architecture du projet
 
-```mermaid
-flowchart TB
-    A["📁 data/<br/>customers / sales / products / marketing"]
+```texte
 
-    A --> B["📊 rapport/<br/><br/>Analyse complète<br/>Sections M1 à M9"]
-    A --> C["📈 dashboard/<br/><br/>Streamlit interactif<br/>Segmentation • Campagnes<br/>Churn / CLV • Données"]
-    A --> D["🎓 presentation/<br/><br/>Synthèse visuelle<br/>pour la soutenance"]
-
-    style A stroke-width:2px
-    style B stroke-width:2px
-    style C stroke-width:2px
-    style D stroke-width:2px
+                           ┌──────────────────────────────┐
+                           │            data/             │
+                           │                              │
+                           │  customers / sales /         │
+                           │  products / marketing        │
+                           └──────────────┬───────────────┘
+                                          │
+                    ┌─────────────────────┼─────────────────────┐
+                    │                     │                     │
+                    ▼                     ▼                     ▼
+          ┌───────────────────┐ ┌───────────────────┐ ┌───────────────────┐
+          │     rapport/      │ │    dashboard/     │ │  presentation/    │
+          │                   │ │                   │ │                   │
+          │ • Analyse        │ │ • Streamlit       │ │ • Synthèse        │
+          │   complète       │ │   interactif      │ │   visuelle        │
+          │ • Sections       │ │ • Segmentation    │ │ • Résultats clés  │
+          │   M1 → M9        │ │ • Campagnes       │ │ • Visualisations  │
+          │                   │ │ • Churn / CLV     │ │ • Soutenance      │
+          │                   │ │ • Données         │ │                   │
+          └───────────────────┘ └───────────────────┘ └───────────────────┘
 ```
 
 Le dossier `data/` est la source unique de vérité : le rapport, le dashboard et la présentation s'appuient tous sur les mêmes 4 fichiers CSV.
