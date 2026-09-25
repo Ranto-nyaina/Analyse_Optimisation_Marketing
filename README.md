@@ -37,7 +37,7 @@ Comment exploiter les données clients, produits, ventes et campagnes pour segme
                           └─────────────┬─────────────┘
                                         │
                ┌────────────────────────┼────────────────────────┐
-               ▼                        ▼                        ▼
+               ▼                        ▼                         ▼
     ┌─────────────────────┐  ┌─────────────────────┐  ┌─────────────────────┐
     │      rapport/       │  │     dashboard/      │  │    presentation/    │
     │  analyse complète   │  │Streamlit interactif │  │  synthèse visuelle  │
@@ -56,7 +56,6 @@ Le dossier `data/` est la source unique de vérité : le rapport, le dashboard e
 ```text
 .
 ├── rapport/
-│   ├── Rapport_Analyse_Optimisation_Marketing.docx
 │   └── Rapport_Analyse_Optimisation_Marketing.pdf
 ├── presentation/
 │   └── Presentation_Analyse_Optimisation_Marketing.pptx
