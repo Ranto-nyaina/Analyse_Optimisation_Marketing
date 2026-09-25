@@ -31,9 +31,9 @@ Comment exploiter les données clients, produits, ventes et campagnes pour segme
 
 ```text
                           ┌───────────────────────────┐
-                          │           data/           │
-                          │  customers / sales /      │
-                          │  products / marketing     │
+                          │            data/           │
+                          │   customers / sales /      │
+                          │   products / marketing     │
                           └─────────────┬─────────────┘
                                         │
                ┌────────────────────────┼────────────────────────┐
