@@ -30,27 +30,21 @@ Comment exploiter les données clients, produits, ventes et campagnes pour segme
 ## 🏗️ Architecture du projet
 
 ```texte
-
-                           ┌──────────────────────────────┐
-                           │            data/             │
-                           │                              │
-                           │  customers / sales /         │
-                           │  products / marketing        │
-                           └──────────────┬───────────────┘
-                                          │
-                    ┌─────────────────────┼─────────────────────┐
-                    │                     │                     │
-                    ▼                     ▼                     ▼
-          ┌───────────────────┐ ┌───────────────────┐ ┌───────────────────┐
-          │     rapport/      │ │    dashboard/     │ │  presentation/    │
-          │                   │ │                   │ │                   │
-          │ • Analyse        │ │ • Streamlit       │ │ • Synthèse        │
-          │   complète       │ │   interactif      │ │   visuelle        │
-          │ • Sections       │ │ • Segmentation    │ │ • Résultats clés  │
-          │   M1 → M9        │ │ • Campagnes       │ │ • Visualisations  │
-          │                   │ │ • Churn / CLV     │ │ • Soutenance      │
-          │                   │ │ • Données         │ │                   │
-          └───────────────────┘ └───────────────────┘ └───────────────────┘
+                         ┌───────────────────────────┐
+                         │            data/          │
+                         │     customers / sales /   │
+                         │     products / marketing  │
+                         └─────────────┬─────────────┘
+                                       │
+              ┌────────────────────────┼────────────────────────┐
+              ▼                        ▼                        ▼
+    ┌─────────────────────┐  ┌─────────────────────┐  ┌─────────────────────┐
+    │       rapport/      │  │      dashboard/     │  │    presentation/    │
+    │   analyse complète  │  │ Streamlit interactif│  │  synthèse visuelle  │
+    │   (sections M1 à M9)│  │  (segmentation,     │  │  pour la soutenance │
+    │                     │  │   campagnes,        │  │                     │
+    │                     │  │   churn/CLV, données)│  │                     │
+    └─────────────────────┘  └─────────────────────┘  └─────────────────────┘
 ```
 
 Le dossier `data/` est la source unique de vérité : le rapport, le dashboard et la présentation s'appuient tous sur les mêmes 4 fichiers CSV.
